@@ -12,4 +12,3 @@ ON JH.job_id = J.job_id
 INNER JOIN hr.departments AS D
 ON JH.department_id = D.department_id
 ORDER BY CONCAT(E.first_name, ' ', E.last_name) DESC, J.job_title ASC;
-
