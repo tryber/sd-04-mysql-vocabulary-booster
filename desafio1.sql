@@ -1,0 +1,3 @@
+SELECT COUNTRY_NAME AS 'País', REGION_ID AS 'Status Inclusão'
+FROM hr.countries
+ORDER BY COUNTRY_NAME;
