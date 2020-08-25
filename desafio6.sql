@@ -5,7 +5,7 @@
 -- A terceira coluna deve possuir o alias "Data de início do cargo" e exibir a data que a pessoa iniciou o cargo.
 -- A quarta coluna deve possuir o alias "Departamento" e mostrar o nome do departamento em que a pessoa exerceu seu cargo.
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem decrescente. Em caso de empate no nome completo, ordene os resultados pelo nome do cargo em ordem alfabética.
-SELECT CONCAT(e.FIRST_NAME,' ', e.LAST_NAME) AS `NOME COMPLETO`,
+SELECT CONCAT(e.FIRST_NAME,' ', e.LAST_NAME) AS `Nome completo`,
 j.JOB_TITLE as Cargo,
 h.START_DATE as `Data de início do cargo`,
 d.DEPARTMENT_NAME as Departamento
