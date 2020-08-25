@@ -7,4 +7,4 @@ ROUND(AVG(quantity),2) AS 'Média'
 FROM w3schools.order_details
 GROUP BY ProductID
 HAVING AVG(quantity) > 20
-ORDER BY ROUND(AVG(quantity), 2), Produto;
+ORDER BY `Média`, Produto;
