@@ -5,4 +5,5 @@ SELECT
     FROM hr.regions
     WHERE REGION_NAME = 'Europe'
   ), 'incluído', 'não incluído') AS 'Status Inclusão'
-FROM hr.countries;
+FROM hr.countries
+ORDER BY COUNTRY_NAME ASC;
