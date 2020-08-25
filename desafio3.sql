@@ -1,4 +1,4 @@
-SELECT J.JOB_TITLE Cargo, (J.MAX_SALARY - J.MIN_SALARY) 'Média Salarial', 
+SELECT J.JOB_TITLE Cargo, (J.MAX_SALARY - J.MIN_SALARY) as 'Diferença entre salários máximo e mínimo', (J.MAX_SALARY - J.MIN_SALARY) 'Média Salarial', 
 (CASE 
 WHEN (J.MAX_SALARY - J.MIN_SALARY)  BETWEEN 2000 AND 5800  THEN 'Júnior' 
 WHEN (J.MAX_SALARY - J.MIN_SALARY)  BETWEEN 5801 AND 7500  THEN 'Pleno' 
