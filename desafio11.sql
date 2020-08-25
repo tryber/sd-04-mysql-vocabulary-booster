@@ -5,5 +5,5 @@ FROM w3schools.customers AS c1,
 w3schools.customers AS c2
 WHERE c1.ContactName <> c2.ContactName
 AND c1.Country = c2.Country
-GROUP BY Nome
+GROUP BY Nome, País
 ORDER BY Nome;
