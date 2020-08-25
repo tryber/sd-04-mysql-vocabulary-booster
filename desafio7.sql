@@ -12,4 +12,3 @@ WHERE
 ORDER BY
   CONCAT(e.first_name, " ", e.last_name),
   h.START_DATE;
-  

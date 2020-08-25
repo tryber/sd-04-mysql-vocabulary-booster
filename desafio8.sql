@@ -13,4 +13,3 @@ ORDER BY
   c.ContactName,
   s.ShipperName,
   o.OrderDate;
-  

@@ -11,4 +11,3 @@ FROM
 ORDER BY
   CONCAT(e.first_name, " ", e.last_name) DESC,
   Cargo;
-  

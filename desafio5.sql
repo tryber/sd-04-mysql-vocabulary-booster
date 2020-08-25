@@ -8,4 +8,3 @@ FROM
 ORDER BY
   (MAX_SALARY - MIN_SALARY),
   Cargo;
-  
