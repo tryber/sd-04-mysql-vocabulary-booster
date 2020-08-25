@@ -13,5 +13,5 @@ FROM
 GROUP BY
   j.job_id
 ORDER BY
-  ROUND(AVG(e.salary), 2),
+  `Média salarial`,
   Cargo;

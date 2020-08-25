@@ -9,5 +9,5 @@ FROM
   INNER JOIN hr.jobs AS j ON (j.job_id = h.job_id)
   INNER JOIN hr.departments AS d ON (d.department_id = h.department_id)
 ORDER BY
-  CONCAT(e.first_name, ' ', e.last_name) DESC,
+  `Nome completo`,
   Cargo;
