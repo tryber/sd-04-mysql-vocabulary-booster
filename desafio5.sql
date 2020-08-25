@@ -11,7 +11,7 @@
 -- os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
 SELECT * FROM hr.jobs;
 
-SELECT job_title AS `Cargo`, max_salary - min_salary AS `Variação salarial`,
+SELECT job.job_title AS `Cargo`, job.max_salary - job.min_salary AS `Variação salarial`,
   ROUND((min_salary / 12), 2) AS `Média mínima mensal`, ROUND((max_salary / 12), 2) AS `Média máxima mensal`
 FROM hr.jobs
 ORDER BY `Variação salarial`, `Cargo`;
