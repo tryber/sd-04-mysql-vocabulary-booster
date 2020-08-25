@@ -6,8 +6,8 @@ WHEN AVG(emp.SALARY) BETWEEN 5801 AND 7500 THEN 'Pleno'
 WHEN AVG(emp.SALARY) BETWEEN 7501 AND 10500 THEN 'Sênior'
 WHEN AVG(emp.SALARY) > 10500 THEN 'CEO'
 END AS 'Senioridade'
-FROM hr.jobs job
-JOIN hr.employees emp
+FROM hr.jobs AS job
+INNER JOIN hr.employees AS emp
 ON job.JOB_ID = emp.JOB_ID
-GROUP BY emp.JOB_ID
+GROUP BY Cargo
 ORDER BY AVG(emp.SALARY), Cargo;
