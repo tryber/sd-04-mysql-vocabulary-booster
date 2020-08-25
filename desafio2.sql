@@ -6,7 +6,7 @@ WHEN J.MAX_SALARY between 20001 and 30000 then 'Alto'
 ELSE 'Altissímo'
 end) Nível
 from hr.jobs J
-order by Nível asc;
+order by Cargo;
 
 #select * from hr.jobs;
 
