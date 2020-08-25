@@ -5,7 +5,7 @@ COUNT(c.ContactName) AS `Número de compatriotas`
 FROM
 w3schools.customers n,
 w3schools.customers c
-WHERE n.CustomerID <> c.CustomerID
+WHERE n.ContactName <> c.ContactName
 AND n.Country = c.Country
-GROUP BY n.ContactName
+GROUP BY n.CustomerID
 ORDER BY Nome;
