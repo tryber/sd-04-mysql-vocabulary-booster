@@ -11,7 +11,7 @@ Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em
  que a pessoa iniciou seu cargo, em ordem crescente. */
 SELECT UCASE(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS `Nome completo`,
   jh.START_DATE AS `Data de início`,
-  e.SALARY
+  e.SALARY AS `Salário`
 FROM hr.job_history AS jh
 INNER JOIN employees AS e ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
 WHERE MONTH(jh.START_DATE) IN (1, 2, 3)
