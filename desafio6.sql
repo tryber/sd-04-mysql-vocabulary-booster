@@ -11,9 +11,9 @@ Faça um relatório que mostra o histórico de cargos das pessoas empregadas.
 Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem decrescente.
  Em caso de empate no nome completo, ordene os resultados pelo nome do cargo em ordem alfabética. */
 SELECT CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS `Nome completo`,
- j.JOB_TITLE AS `Cargo`,
- jh.START_DATE AS `Data de início do cargo`,
- d.DEPARTMENT_NAME AS `Departamento`
+  j.JOB_TITLE AS `Cargo`,
+  jh.START_DATE AS `Data de início do cargo`,
+  d.DEPARTMENT_NAME AS `Departamento`
 FROM hr.job_history AS jh
 INNER JOIN employees AS e ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
 INNER JOIN jobs AS j ON jh.JOB_ID = j.JOB_ID
