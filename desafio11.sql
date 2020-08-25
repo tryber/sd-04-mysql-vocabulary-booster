@@ -12,5 +12,7 @@ SELECT
   ) AS 'Número de compatriotas'
 FROM
   w3schools.customers AS c
+HAVING
+  `Número de compatriotas` > 0
 ORDER BY
   `Nome`;
