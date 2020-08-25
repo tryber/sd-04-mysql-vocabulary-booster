@@ -1,6 +1,6 @@
 select jobs.job_title as Cargo,
 case
-	when (jobs.max_salary >= 5000  and jobs.max_salary <= 10000) then"Baixo" 
+	  when (jobs.max_salary >= 5000  and jobs.max_salary <= 10000) then"Baixo" 
     when (jobs.max_salary >= 1001 and jobs.max_salary <= 20000) then"Médio"
     when (jobs.max_salary >= 20001 and jobs.max_salary <= 30000) then"Alto"
     when (jobs.max_salary >= 3001 ) then"Altíssimo" 
