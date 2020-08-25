@@ -5,6 +5,8 @@ SELECT
 FROM
   hr.employees as e
   INNER JOIN hr.job_history as h ON h.EMPLOYEE_ID = e.EMPLOYEE_ID
+  INNER JOIN hr.jobs AS j ON j.JOB_ID = h.JOB_ID
+  INNER JOIN hr.departments AS d ON d.DEPARTMENT_ID = h.DEPARTMENT_ID
 Where
   month(h.start_date) < 4
 ORDER BY
