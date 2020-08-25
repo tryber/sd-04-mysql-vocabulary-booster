@@ -5,4 +5,3 @@ FROM
   hr.countries
 ORDER BY
   País;
-    
