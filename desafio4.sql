@@ -6,5 +6,5 @@ WHEN ROUND(AVG(salary), 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
 ELSE 'CEO'
 END AS "Senioridade"
 FROM hr.employees
-GROUP BY salary
+GROUP BY job_ID
 ORDER BY `Média Salarial`, Cargo;
