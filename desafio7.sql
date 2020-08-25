@@ -9,4 +9,4 @@ WHERE
   MONTH(h.start_date) IN ('1', '2', '3')
 ORDER BY
   `Nome completo`,
-  `Date de início`;
+  `Data de início`;
