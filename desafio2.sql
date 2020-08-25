@@ -1,4 +1,4 @@
-SELECT J.JOB_TITLE as Cargo, (
+SELECT J.JOB_TITLE Cargo, (
 CASE 
 WHEN J.MAX_SALARY between 5000 and 10000 then 'Baixo'
 WHEN J.MAX_SALARY between 10001 and 20000 then 'Médio'
@@ -7,7 +7,3 @@ ELSE 'Altissímo'
 end) Nível
 from hr.jobs J
 order by Cargo;
-
-#select * from hr.jobs;
-
-#select truncate(avg(salary),2) Média from hr.employees;
