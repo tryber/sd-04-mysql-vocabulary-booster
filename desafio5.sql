@@ -1,5 +1,5 @@
 select job_title as Cargo,
-max(max_salary) - min(min_salary) as 'Variação Salarial',
+(max_salary - min_salary) as 'Variação Salarial',
 round((min_salary / 12), 2) as 'Média mínima mensal',
 round((max_salary / 12), 2) as 'Média máxima mensal'
 from jobs
