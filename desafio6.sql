@@ -19,4 +19,5 @@ FROM hr.departments
 WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
 ) AS `Departamento`
 FROM hr.job_history
-ORDER BY `Nome completo` DESC, Cargo;
+ORDER BY `Nome completo` DESC, Cargo
+LIMIT 10;
