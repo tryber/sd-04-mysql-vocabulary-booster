@@ -12,4 +12,4 @@ WHEN AVG(SALARY) BETWEEN 7501.00 AND 10500.00 THEN "Sênior"
 WHEN AVG(SALARY) > 10500 THEN "CEO"
 ELSE "Estagiário Sofrido"
 END AS Senioridade
-FROM hr.employees GROUP BY JOB_ID ORDER BY `Média salarial`;
+FROM hr.employees GROUP BY JOB_ID ORDER BY `Média salarial`, Cargo;
