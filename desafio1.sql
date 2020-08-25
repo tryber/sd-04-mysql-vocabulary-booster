@@ -5,6 +5,6 @@
 -- renomeia coluna region_id por Status Inclusão e coloca resultado booleano
 -- Verifica-se na tabela hr.countries e ordena por países ascedentes
 SELECT country_name AS País,
-	IF(region_id = 1, 'incluído', 'não incluído') AS 'Status Inclusão'
+IF(region_id = 1, 'incluído', 'não incluído') AS 'Status Inclusão'
 FROM hr.countries 
 ORDER BY País;
