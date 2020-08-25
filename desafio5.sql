@@ -9,9 +9,9 @@
 -- Arredonde a média com uma precisão de duas casas decimais.
 -- Os resultados devem estar ordenados pela variação salarial em ordem crescente. Em caso de empate na variação,
 -- os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
-SELECT * FROM hr.jobs;
+-- SELECT * FROM hr.jobs;
 
 SELECT job.job_title AS `Cargo`, job.max_salary - job.min_salary AS `Variação salarial`,
-  ROUND((min_salary/12), 2) AS `Média mínima mensal`, ROUND((max_salary/12), 2) AS `Média máxima mensal`
+ROUND((min_salary/12), 2) AS `Média mínima mensal`, ROUND((max_salary/12), 2) AS `Média máxima mensal`
 FROM hr.jobs
 ORDER BY `Variação salarial`, `Cargo`;
