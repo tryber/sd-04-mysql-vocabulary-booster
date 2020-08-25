@@ -1,6 +1,5 @@
 -- Os resultados devem estar ordenados pela média salarial em ordem crescente.
 -- Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética. 
-SELECT * FROM hr.jobs;
 SELECT 
 J.JOB_TITLE AS `Cargo`, ROUND(AVG(E.SALARY), 2) AS `Média salarial`,
 CASE 
