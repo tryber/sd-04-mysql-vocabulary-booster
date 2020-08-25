@@ -10,4 +10,4 @@ FROM hr.jobs job
 JOIN hr.employees emp
 ON job.JOB_ID = emp.JOB_ID
 GROUP BY emp.JOB_ID
-ORDER BY AVG(job.SALARY), Cargo;
+ORDER BY AVG(job.JOB_TITLE), Cargo;
