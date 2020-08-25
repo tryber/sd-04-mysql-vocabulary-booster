@@ -12,4 +12,3 @@ SELECT A.contactName AS `Nome`, A.country AS `País`, COUNT(B.contactName) AS `N
 FROM w3schools.customers AS A, w3schools.customers AS B
 WHERE A.Country = B.Country AND A.contactName <> B.contactName
 GROUP BY A.CustomerId ORDER BY `Nome`;
-
