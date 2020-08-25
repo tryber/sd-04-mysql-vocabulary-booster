@@ -10,3 +10,4 @@ SELECT
             regions.REGION_ID = hr.countries.REGION_ID) AS 'Status Inclusão'
 FROM
     hr.countries
+ORDER BY COUNTRY_NAME;
