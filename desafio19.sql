@@ -4,13 +4,12 @@ BEGIN
     CONCAT(Emp.FIRST_NAME, ' ', Emp.LAST_NAME) AS 'Nome completo',
     Dep.DEPARTMENT_NAME AS Departamento,
     Jobs.JOB_TITLE AS Cargo
-  FROM hr.employees AS Emp
+  FROM hr.job_history AS JobHistory
+  INNER JOIN hr.employees AS Emp
+  ON JobHistory.EMPLOYEE_ID = Emp.EMPLOYEE_ID
   INNER JOIN hr.departments AS Dep
-  ON Emp.DEPARTMENT_ID = Dep.DEPARTMENT_ID
+  ON JobHistory.DEPARTMENT_ID = Dep.DEPARTMENT_ID
   INNER JOIN hr.jobs AS Jobs
-  ON Emp.JOB_ID = Jobs.JOB_ID
-  INNER JOIN hr.job_history AS JobHistory
-  ON Emp.EMPLOYEE_ID = JobHistory.EMPLOYEE_ID
-  WHERE Emp.EMAIL = employee_email
-  ORDER BY Departamento ASC, Cargo ASC;
+  ON JobHistory.JOB_ID = Jobs.JOB_ID
+  WHERE Emp.EMAIL = employee_email;
 END $$
