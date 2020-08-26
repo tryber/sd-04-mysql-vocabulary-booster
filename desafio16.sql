@@ -15,4 +15,4 @@ WHERE e.EMAIL = email_employee;
 RETURN total_empregos;
 END $$ DELIMITER ;
 
-select hr.buscar_quantidade_de_empregos_por_funcionario('NKOCHHAR');
+select hr.buscar_quantidade_de_empregos_por_funcionario('NKOCHHAR') AS total_empregos;
