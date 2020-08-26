@@ -16,4 +16,5 @@ SELECT ContactName AS Nome,
   Country AS 'País',
   calculateCompatriots(country) AS 'Número de compatriotas'
   FROM w3schools.customers
+  WHERE calculateCompatriots(country) > 0
   ORDER BY Nome;
