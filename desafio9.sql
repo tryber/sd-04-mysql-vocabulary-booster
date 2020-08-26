@@ -11,7 +11,7 @@ SELECT * FROM w3schools.employees;
 
 -- Ordene seus resultados pelo total de pedidos em ordem crescente.
 SELECT 
-    CONCAT(E.FirstName, ' ', E.LastName) AS 'Nome completo',
+    CONCAT(E.FirstName,' ',E.LastName) AS 'Nome completo',
     COUNT(O.EmployeeID) AS `Total de pedidos`
 FROM
     w3schools.employees AS E
