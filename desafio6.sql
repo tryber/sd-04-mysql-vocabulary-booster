@@ -10,4 +10,4 @@ INNER JOIN hr.jobs AS jb
 ON jh.JOB_ID = jb.JOB_ID
 INNER JOIN hr.departments AS dp
 ON dp.DEPARTMENT_ID = jh.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC, Cargo, `Data de início de cargo` DESC;
+ORDER BY `Nome completo` DESC, Cargo, `Data de início do cargo` DESC;
