@@ -1,4 +1,4 @@
-SELECT * FROM w3schools.employees;
+
 -- 9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu
 -- total de pedidos feitos. Usando o banco w3schools como referência, monte uma query que
 -- exiba duas colunas:
