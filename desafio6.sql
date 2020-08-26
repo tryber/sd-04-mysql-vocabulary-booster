@@ -1,5 +1,4 @@
 SELECT
-  EMPLOYEE_ID,
   (
     SELECT
       CONCAT(FIRST_NAME, ' ', LAST_NAME)
@@ -29,5 +28,6 @@ FROM
   hr.job_history
 WHERE
   EMPLOYEE_ID <> 0
-  ORDER BY `Nome completo` DESC, CARGO
-  ;
+ORDER BY
+  `Nome completo` DESC,
+  CARGO;
