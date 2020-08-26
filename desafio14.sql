@@ -1,5 +1,5 @@
-SELECT Country FROM w3schools.suppliers
+SELECT DISTINCT Country FROM w3schools.suppliers
 UNION
-SELECT Country FROM w3schools.customers
+SELECT DISTINCT Country FROM w3schools.customers
 ORDER BY Country
 LIMIT 5;
