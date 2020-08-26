@@ -1,11 +1,12 @@
 SELECT
-    CONCAT(UPPER(e.FIRST_NAME), ' ', UPPER(e.LAST_NAME)) AS 'Nome completo',
-    h.START_DATE AS 'Data de início do cargo',
-    e.SALARY AS 'Salário'
+    c.ContactName AS 'Nome de contato',
+    s.ShipperName AS 'Empresa que fez o envio',
+    o.OrderDate AS 'Data do pedido'
 FROM
-    hr.employees AS e
-    INNER JOIN hr.job_history h ON e.EMPLOYEE_ID = h.EMPLOYEE_ID
-    INNER JOIN hr.jobs j ON h.JOB_ID = j.JOB_ID
+    w3schools.orders AS o
+    INNER JOIN w3schools.customers AS c ON c.CustomerID = o.CustomerID
+    INNER JOIN w3schools.shippers AS s ON o.ShipperID = s.ShipperID
 ORDER BY
-    CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) ASC,
-    h.START_DATE ASC;
+    c.ContactName ASC,
+    s.ShipperName ASC,
+    o.OrderDate ASC;
