@@ -28,3 +28,6 @@ SELECT  A.ContactName AS 'Nome', A.Country AS 'País', COUNT(B.ContactName) AS '
 FROM w3schools.customers  AS A, w3schools.customers AS B
 WHERE  A.ContactName <> B.ContactName AND A.Country = B.Country
 GROUP BY A.CustomerID ORDER BY `Nome`;
+
+-- Por que quer usar os dados de uma mesma tabela e ele quer comparar
+-- diferentes nomes então ai tem que fazer o where com <> mas que sejam de um mesmo pais
