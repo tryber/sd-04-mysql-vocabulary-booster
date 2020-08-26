@@ -1,6 +1,3 @@
-USE hr;
-DROP function IF EXISTS buscar_quantidade_de_empregos_por_funcionario;
-
 DELIMITER $$
 USE hr$$
 CREATE DEFINER=CURRENT_USER FUNCTION buscar_quantidade_de_empregos_por_funcionario(email_employee varchar(25)) RETURNS int
@@ -8,10 +5,10 @@ CREATE DEFINER=CURRENT_USER FUNCTION buscar_quantidade_de_empregos_por_funcionar
 BEGIN
 DECLARE total_emails INTEGER;
 SELECT 
-count(e.LAST_NAME) INTO total_emails
+count(e.LAST_NAME) INTO total_empregos
 FROM hr.employees e 
 INNER JOIN job_history jh 
 ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID 
 WHERE e.EMAIL = email_employee;
-RETURN total_emails;
+RETURN total_empregos;
 END$$
