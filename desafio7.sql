@@ -1,6 +1,6 @@
 SELECT
     CONCAT(UPPER(e.FIRST_NAME), ' ', UPPER(e.LAST_NAME)) AS 'Nome completo',
-    h.START_DATE AS 'Data de início do cargo',
+    h.START_DATE AS 'Data de início',
     e.SALARY AS 'Salário'
 FROM
     hr.employees AS e
