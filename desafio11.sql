@@ -14,6 +14,6 @@ SELECT
 FROM
   w3schools.customers
 HAVING
-  `Números de compatriotas` > 0
+  `Número de compatriotas` > 0
 ORDER BY
   ContactName;
