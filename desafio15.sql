@@ -1,6 +1,8 @@
 USE hr;
 DELIMITER $$
 
+DROP PROCEDURE buscar_media_por_cargo;
+
 CREATE PROCEDURE buscar_media_por_cargo(IN jobTitle VARCHAR(50))
 
 BEGIN
