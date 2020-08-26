@@ -10,7 +10,7 @@ SELECT
       country = `País`
     GROUP BY
       Country
-  ) AS 'Números de compatriotas'
+  ) AS 'Número de compatriotas'
 FROM
   w3schools.customers
 HAVING
