@@ -96,4 +96,6 @@ const challengeResult4 = [
   }
 ];
 
+console.log(Object.keys(challengeResult4).length);
+
 module.exports = challengeResult4;
