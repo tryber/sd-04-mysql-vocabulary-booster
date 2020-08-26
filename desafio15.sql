@@ -11,6 +11,4 @@ FROM hr.employees e
 INNER JOIN hr.jobs j 
 ON j.JOB_ID = e.JOB_ID
 WHERE JOB_TITLE = nome_cargo;
-END$$
-
-DELIMITER ;
+END $$ DELIMITER ;
