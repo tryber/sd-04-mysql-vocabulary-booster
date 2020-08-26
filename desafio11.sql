@@ -1,4 +1,3 @@
-USE w3schools;
 DELIMITER $$
 
 CREATE FUNCTION calculateCompatriots(country VARCHAR(100))
@@ -8,9 +7,7 @@ BEGIN
   SELECT COUNT(*) -1 FROM w3schools.customers WHERE w3schools.customers.Country = country
   INTO compatriots;
   RETURN compatriots;
-END $$
-
-DELIMITER ;
+END $$ DELIMITER ;
 
 SELECT ContactName AS Nome,
   Country AS 'País',
