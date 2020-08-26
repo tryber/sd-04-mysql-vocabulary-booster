@@ -12,4 +12,3 @@ WHERE EMPLOYEE_ID = emp_id INTO emp_qnt;
 RETURN e_qnt;
 END $$
 DELIMITER ;
-    
