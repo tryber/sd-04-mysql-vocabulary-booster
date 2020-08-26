@@ -1,19 +1,19 @@
 SELECT
-  ContactName as Nome,
-  Country as País,
+  ContactName AS Nome,
+  Country AS País,
   (
     SELECT
       Count(Country) -1
     FROM
       w3schools.customers
-    Where
+    WHERE
       country = `País`
     GROUP BY
       Country
   ) AS 'Números de compatriotas'
 FROM
   w3schools.customers
-having
-  `Números de compatriotas` > 0
+HAVING
+  `Número de compatriotas` > 0
 ORDER BY
   ContactName;
