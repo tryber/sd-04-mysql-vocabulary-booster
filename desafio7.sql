@@ -1,5 +1,5 @@
 SELECT 
-    UCASE(CONCAT(A.FIRST_NAME, ' ', A.LAST_NAME)) AS 'Nome Completo',
+    UCASE(CONCAT(A.FIRST_NAME, ' ', A.LAST_NAME)) AS 'Nome completo',
     B.START_DATE AS 'Data de início',
     A.SALARY AS 'Salário'
 FROM
