@@ -21,5 +21,5 @@ B.SALARY AS 'Salário funcionário 2',
 B.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM
 hr.employees AS A,  hr.employees AS B WHERE A.JOB_ID = B.JOB_ID AND 'Nome completo funcionário 1' <> 'Nome completo funcionário 2'
-ORDER BY `Nome completo funcionário 2`, `Nome completo funcionário 2`;
+ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
 
