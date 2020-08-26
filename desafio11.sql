@@ -5,5 +5,6 @@ FROM w3schools.customers AS a,
   w3schools.customers AS b
 WHERE a.country = b.country
   AND a.contactName <> b.contactName
-GROUP BY a.customerID
+-- GROUP BY a.customerID
+GROUP BY a.contactName
 ORDER BY a.contactName;
