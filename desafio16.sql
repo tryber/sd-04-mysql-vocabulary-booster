@@ -1,9 +1,12 @@
+USE hr;
+DROP function IF EXISTS buscar_quantidade_de_empregos_por_funcionario;
+
 DELIMITER $$
 USE hr$$
-CREATE DEFINER=CURRENT_USER FUNCTION buscar_quantidade_de_empregos_por_funcionario(email_employee varchar(25)) RETURNS int
+CREATE DEFINER=CURRENT_USER FUNCTION `buscar_quantidade_de_empregos_por_funcionario`(email_employee varchar(25)) RETURNS int
     READS SQL DATA
 BEGIN
-DECLARE total_emails INTEGER;
+DECLARE total_empregos INTEGER;
 SELECT 
 count(e.LAST_NAME) INTO total_empregos
 FROM hr.employees e 
