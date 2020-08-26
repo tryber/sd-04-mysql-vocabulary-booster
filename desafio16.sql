@@ -7,9 +7,9 @@ BEGIN
     DECLARE total INT;
     SELECT COUNT(*)
     FROM employees AS e
-    WHERE email = searchEmail INTO total
     JOIN job_history AS j
-    ON e.employee_id = j.employee_id;
+    ON e.employee_id = j.employee_id
+    WHERE email = searchEmail INTO total;
     RETURN total;
 END $$
 
