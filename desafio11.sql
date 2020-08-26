@@ -7,7 +7,7 @@ BEGIN
   SELECT COUNT(*) - 1 FROM w3schools.customers WHERE w3schools.customers.Country = varCountry
   INTO compatriots;
   RETURN compatriots;
-END $$
+END$$
 DELIMITER ;
 SELECT
   ContactName AS Nome,
