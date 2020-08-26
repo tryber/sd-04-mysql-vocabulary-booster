@@ -1,6 +1,6 @@
 -- DESAFIO 14
 
-(SELECT country FROM w3schools.customers ORDER BY country LIMIT 5)
+(SELECT country AS País FROM w3schools.customers ORDER BY country)
 UNION
-(SELECT country from w3schools.suppliers ORDER BY country LIMIT 5)
-ORDER BY country LIMIT 5;
+(SELECT country FROM w3schools.suppliers ORDER BY country)
+ORDER BY País LIMIT 5;
