@@ -16,4 +16,3 @@ FROM
     employees e
 GROUP BY Cargo
 ORDER BY ROUND(AVG(salary), 2);
-    
