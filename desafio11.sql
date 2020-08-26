@@ -9,5 +9,6 @@ WHERE a.Country = customers.Country
 GROUP BY Country
 ) AS `Número de compatriotas`
 FROM w3schools.customers
-GROUP BY customers.CustomerID
+GROUP BY CustomerID
+HAVING `Número de compatriotas` > 1
 ORDER BY ContactName;
