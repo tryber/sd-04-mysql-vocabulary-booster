@@ -2,7 +2,7 @@ USE hr;
 DROP function IF EXISTS buscar_quantidade_de_empregos_por_funcionario;
 
 DELIMITER $$
-CREATE DEFINER=CURRENT_USER FUNCTION buscar_quantidade_de_empregos_por_funcionario(email_employee varchar(25))
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email_employee varchar(25))
 RETURNS int READS SQL DATA
 BEGIN
 DECLARE total_empregos INTEGER;
@@ -14,3 +14,5 @@ ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
 WHERE e.EMAIL = email_employee;
 RETURN total_empregos;
 END $$ DELIMITER ;
+
+select hr.buscar_quantidade_de_empregos_por_funcionario('NKOCHHAR');
