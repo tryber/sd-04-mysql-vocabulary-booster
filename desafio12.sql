@@ -1,4 +1,3 @@
-select * From hr.employees;
 SELECT
 -- Colunas correspondentes a pessoa funcionaria 1
   CONCAT(e1.FIRST_NAME, ' ',e1.LAST_NAME) AS `Nome completo funcionário 1`,
