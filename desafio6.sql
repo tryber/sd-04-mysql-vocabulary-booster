@@ -9,5 +9,3 @@ SELECT * FROM hr.employees;
 SELECT * FROM hr.job_history;
 SELECT * FROM hr.jobs;
 SELECT * FROM hr.departments; 
-
-SELECT START_DATE FROM hr.job_history jh 
