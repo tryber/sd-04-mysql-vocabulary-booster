@@ -1,4 +1,3 @@
-SELECT * FROM w3schools.customers;
 SELECT 
 ct.ContactName AS "Nome de contato",
 sp.ShipperName AS "Empresa que faz o envio",
