@@ -26,3 +26,6 @@ WHERE
     A.JOB_ID = B.JOB_ID
         AND CONCAT(A.FIRST_NAME, ' ', A.LAST_NAME) <> CONCAT(B.FIRST_NAME, ' ', B.LAST_NAME)
 ORDER BY `Nome completo funcionário 1` , `Nome completo funcionário 2`;
+
+-- Na linha 27 'no WHERE' não se usa o Alias pq a filtragem ainda nao feita no 
+--  no ORDER BY já se pode usar o alias pq é a posteriori
