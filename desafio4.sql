@@ -15,4 +15,4 @@ SELECT
 FROM
     employees e
 GROUP BY Cargo
-ORDER BY ROUND(AVG(salary), 2);
+ORDER BY `Média salarial`;
