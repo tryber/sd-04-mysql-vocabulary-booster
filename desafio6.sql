@@ -19,3 +19,6 @@ SELECT
   ) AS `Departamento`
 FROM
   hr.employees;
+ORDER BY
+  `Nome completo`,
+  `Cargo`;
