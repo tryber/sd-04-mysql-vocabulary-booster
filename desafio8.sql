@@ -20,7 +20,7 @@ FROM
   w3schools.orders
 WHERE
   ShipperID = 1
-  AND 2
+  OR ShipperID = 2
 ORDER BY
   `Nome de contato`,
   `Empresa que fez o envio`,
