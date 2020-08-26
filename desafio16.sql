@@ -6,7 +6,7 @@ RETURNS INT READS SQL DATA
 
 BEGIN
 
-DECLARE amount_jobs_history VARCHAR(100);
+DECLARE amount_jobs_history INT;
 SELECT COUNT(jh.EMPLOYEE_ID)
 FROM hr.employees AS emp
 JOIN hr.job_history AS jh
@@ -20,3 +20,9 @@ END $$
 DELIMITER ;
 
 SELECT buscar_quantidade_de_empregos_por_funcionario("NKOCHHAR");
+
+-- SELECT COUNT(*) FROM hr.job_history
+-- GROUP BY EMPLOYEE_ID
+-- HAVING EMPLOYEE_ID IN (
+-- SELECT EMPLOYEE_ID from hr.employees
+-- WHERE hr.employees.email =  email)
