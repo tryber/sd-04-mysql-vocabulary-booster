@@ -1,9 +1,15 @@
-CREATE PROCEDURE buscar_media_por_cargo (IN nome_do_cargo VARCHAR(200))
+DELIMITER $$
+DROP PROCEDURE IF exists buscar_media_por_cargo;
+CREATE PROCEDURE buscar_media_por_cargo (IN cargo VARCHAR(200))
+BEGIN
 SELECT
-  AVG(e.salary) AS 'Média salarial'
+  ROUND(AVG(e.salary), 2) AS 'Média salarial'
 FROM
   hr.employees AS e
   INNER JOIN hr.jobs AS j ON (e.job_id = j.job_id)
 WHERE
-  nome_do_cargo = j.job_title
-END $$;
+  j.job_title = cargo;
+END $$
+DELIMITER ;
+
+call buscar_media_por_cargo('Programmer');
