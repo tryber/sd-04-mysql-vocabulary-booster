@@ -1,5 +1,13 @@
 SELECT J.JOB_TITLE AS 'Cargo',
-    (J.MAX_SALARY - J.MIN_SALARY) as 'Diferença entre salários máximo e mínimo'
+    ROUND(AVG(E.SALARY), 2) AS 'Média salarial',
+    CASE
+        WHEN ROUND(AVG(E.SALARY), 2) BETWEEN 2000 AND 5800 THEN 'Júnior'
+        WHEN ROUND(AVG(E.SALARY), 2) BETWEEN 5801 AND 7500 THEN 'Pleno'
+        WHEN ROUND(AVG(E.SALARY), 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
+        WHEN ROUND(AVG(E.SALARY), 2) > 10500 THEN 'CEO'
+    END
 FROM jobs AS J
-ORDER BY `Diferença entre salários máximo e mínimo`,
-    J.JOB_TITLE;
+    INNER JOIN employees AS E ON J.JOB_ID = E.JOB_ID
+GROUP BY J.JOB_TITLE
+ORDER BY `Média salarial` ASC,
+    `Cargo`;
