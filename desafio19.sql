@@ -11,5 +11,6 @@ BEGIN
   ON JobHistory.DEPARTMENT_ID = Dep.DEPARTMENT_ID
   INNER JOIN hr.jobs AS Jobs
   ON JobHistory.JOB_ID = Jobs.JOB_ID
-  WHERE Emp.EMAIL = employee_email;
+  WHERE Emp.EMAIL = employee_email
+  ORDER BY Departamento ASC, Cargo ASC;
 END $$
