@@ -10,4 +10,3 @@ WHERE func1.JOB_ID = func2.JOB_ID
   AND func1.EMPLOYEE_ID <> func2.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1`,
   `Nome completo funcionário 2`;
-  
