@@ -1,5 +1,12 @@
 SELECT
-  ProductID AS `Produto`,
+  (
+    SELECT
+      ProductName
+    From
+      w3schools.products
+    WHERE
+      products.ProductID = w3schools.order_details.ProductID
+  ) AS `Produto`,
   MIN(Quantity) AS `Mínima`,
   MAX(Quantity) AS `Máxima`,
   ROUND(AVG (Quantity), 2) AS `Média`
