@@ -1,6 +1,6 @@
-select Country from w3schools.suppliers
+select Country AS País from w3schools.suppliers 
 union
-select Country from w3schools.customers
+select Country AS País from w3schools.customers
 GROUP BY Country
-ORDER BY Country
+ORDER BY País
 LIMIT 5;
