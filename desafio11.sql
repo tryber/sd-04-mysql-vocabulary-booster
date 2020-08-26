@@ -10,4 +10,5 @@ SELECT
         GROUP BY Country) AS 'Número de compatriotas'
 FROM
     w3schools.customers AS A
+HAVING `Número de compatriotas`> 0
 ORDER BY ContactName;
