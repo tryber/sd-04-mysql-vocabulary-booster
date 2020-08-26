@@ -27,4 +27,4 @@
 SELECT  A.CustomerName AS 'Nome', A.Country AS 'País', COUNT(B.CustomerName) AS 'Número de compatriotas'
 FROM w3schools.customers  AS A, w3schools.customers AS B
 WHERE  A.ContactName <> B.ContactName AND A.Country = B.Country
-GROUP BY A.CustomerID ORDER BY `Nome`;
+GROUP BY A.CustomerID ORDER BY A.CustomerName;
