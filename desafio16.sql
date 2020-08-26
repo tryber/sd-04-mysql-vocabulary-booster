@@ -9,6 +9,6 @@ SELECT EMPLOYEE_ID FROM hr.employees
 WHERE EMAIL = emp_email INTO emp_id;
 SELECT COUNT(*) FROM hr.job_history
 WHERE EMPLOYEE_ID = emp_id INTO emp_qnt;
-RETURN e_qnt;
+RETURN emp_qnt;
 END $$
 DELIMITER ;
