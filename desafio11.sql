@@ -16,4 +16,3 @@ SELECT
 FROM w3schools.customers
 WHERE calcCompatriots(Country) > 0
 ORDER BY Nome;
-  
