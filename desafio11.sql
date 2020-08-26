@@ -1,8 +1,5 @@
 SELECT
   CustomerName,
-  Country,
-  count(*) -1
+  Country
 FROM
-  w3schools.customers
-GROUP BY
-  Country;
+  w3schools.customers;
