@@ -1,5 +1,5 @@
 SELECT jb.JOB_TITLE AS `Cargo`, 
-ROUND(jb.MAX_SALARY-jb.MIN_SALARY, 2) AS `Variação Salarial`, 
+(jb.MAX_SALARY-jb.MIN_SALARY) AS `Variação Salarial`, 
 ROUND((jb.MIN_SALARY/12),2) AS `Média mínima mensal`,
 ROUND((jb.MAX_SALARY/12),2) AS `Média máxima mensal`
 FROM hr.employees as em
