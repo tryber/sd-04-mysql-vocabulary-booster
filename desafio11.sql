@@ -9,4 +9,5 @@ WHERE a.Country = customers.Country
 GROUP BY Country
 ) AS `Número de compatriotas`
 FROM w3schools.customers
+GROUP BY CustomerID
 ORDER BY ContactName;
