@@ -10,6 +10,7 @@
 -- Seus resultados devem estar ordenados pelo nome de contato da pessoa consumidora em ordem alfabética.
 -- Em caso de empate no nome de contato, ordene os resultados pelo nome da empresa que fez o envio do produto
 -- em ordem alfabética e caso há empresas com o mesmo nome, ordene os resultados pela data do pedido em ordem crescente.
+
 SELECT 
     C.ContactName AS `Nome de contato`,
     S.ShipperName AS `Empresa que fez o envio`,
