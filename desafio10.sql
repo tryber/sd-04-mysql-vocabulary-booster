@@ -1,6 +1,3 @@
-SELECT * FROM w3schools.products;
-SELECT * FROM w3schools.order_details;
-
 SELECT p.ProductName `Produto`,
 MIN(od.Quantity) `Mínima`,
 MAX(od.Quantity) `Máxima`,
