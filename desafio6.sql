@@ -20,5 +20,5 @@ SELECT
 FROM
   hr.employees
 ORDER BY
-  `Nome completo`,
+  `Nome completo` DESC,
   `Cargo`;
