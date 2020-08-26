@@ -23,7 +23,7 @@ FROM
         INNER JOIN
     hr.jobs AS J ON H.JOB_ID = J.JOB_ID
         INNER JOIN
-    hr.employees AS E ON E.EMPLOYEE_ID = E.EMPLOYEE_ID
+    hr.employees AS E ON E.EMPLOYEE_ID = H.EMPLOYEE_ID
         INNER JOIN
     hr.departments AS D ON H.DEPARTMENT_ID = D.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC , `Cargo` ASC;
