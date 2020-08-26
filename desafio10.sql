@@ -29,4 +29,4 @@ ORDER BY `Média` , `Produto`;
     
     
     -- * Agrupar para exibir TODOS os produtos que já foram PEDIDOS 
-    -- * o HAVING filtra a coluna agrupada. Ele vai retornar a média de quantidade nos pedidos registrados acima de 20.00
+    -- * o HAVING filtra a COLUNA AGRUPADA. Ele vai retornar a média de quantidade nos pedidos registrados acima de 20.00
