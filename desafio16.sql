@@ -3,15 +3,9 @@ SET
 
 USE hr;
 
-DELIMITER 
+DELIMITER DROP FUNCTION IF EXISTS buscar_quantidade_de_empregos_por_funcionario;
 
-DROP FUNCTION IF EXISTS buscar_quantidade_de_empregos_por_funcionario;
-
-CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email varchar(25)) 
-RETURNS INT 
-BEGIN 
-
-DECLARE quantidade INT;
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email varchar(25)) RETURNS INT BEGIN DECLARE quantidade INT;
 
 SELECT
 	COUNT(*) INTO quantidade
