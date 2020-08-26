@@ -7,9 +7,8 @@ SELECT
     B.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM
     hr.employees AS A
-        INNER JOIN
+        LEFT JOIN
     hr.employees AS B ON A.JOB_ID = B.JOB_ID
 WHERE
-    A.FIRST_NAME <> B.FIRST_NAME
-        AND A.LAST_NAME <> B.LAST_NAME
-ORDER BY 1 , 4;
+    CONCAT(A.FIRST_NAME, ' ', A.LAST_NAME) <> CONCAT(B.FIRST_NAME, ' ', B.LAST_NAME)
+ORDER BY 1, 4;
