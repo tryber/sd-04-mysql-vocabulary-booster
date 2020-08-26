@@ -5,7 +5,7 @@ CREATE PROCEDURE buscar_media_por_cargo(IN jobTitle VARCHAR(50))
 
 BEGIN
 
-SELECT ROUND(AVG(emp.SALARY), 2) AS 'Média Salarial'
+SELECT ROUND(AVG(emp.SALARY), 2) AS 'Média salarial'
 FROM hr.employees AS emp
 JOIN hr.jobs AS jobs
 ON jobs.JOB_ID = emp.JOB_ID
