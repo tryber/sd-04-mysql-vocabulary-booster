@@ -18,7 +18,7 @@ SELECT
       departments.DEPARTMENT_ID = hr.employees.DEPARTMENT_ID
   ) AS `Departamento`
 FROM
-  hr.employees;
+  hr.employees
 ORDER BY
   `Nome completo`,
   `Cargo`;
