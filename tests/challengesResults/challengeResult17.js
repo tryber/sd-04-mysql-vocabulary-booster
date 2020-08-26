@@ -61,4 +61,6 @@ const challengeResult17 = [
   }
 ];
 
+console.log(Object.keys(challengeResult17).length);
+
 module.exports = challengeResult17;
