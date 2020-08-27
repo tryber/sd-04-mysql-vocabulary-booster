@@ -3,8 +3,7 @@ DELIMITER $$
 
 CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN email VARCHAR(100))
 BEGIN
-SELECT 
-	CONCAT(em.FIRST_NAME, ' ', em.LAST_NAME) AS `Nome completo`,
+SELECT CONCAT(em.FIRST_NAME, ' ', em.LAST_NAME) AS `Nome completo`,
     dp.DEPARTMENT_NAME AS `Departamento`,
     jo.JOB_TITLE AS `Cargo`
 FROM hr.job_history AS jb
