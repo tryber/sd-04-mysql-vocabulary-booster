@@ -1,0 +1,8 @@
+SELECT CONCAT_WS(' ', FIRST_NAME, LAST_NAME) AS 'Nome completo', JOB_TITLE AS 'Cargo', 
+START_DATE AS 'Data de início do cargo',
+DEPARTMENT_NAME AS 'Departamento' from employees e
+INNER JOIN job_history jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
+INNER JOIN jobs j ON j.JOB_ID = jh.JOB_ID
+INNER JOIN 	departments d on d.DEPARTMENT_ID = jh.DEPARTMENT_ID 
+GROUP BY CONCAT_WS(' ', FIRST_NAME, LAST_NAME), Cargo, START_DATE, DEPARTMENT_NAME 
+ORDER BY CONCAT_WS(' ', FIRST_NAME, LAST_NAME) DESC, Cargo ASC;
