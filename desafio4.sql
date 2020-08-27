@@ -16,7 +16,7 @@ SELECT jobs.job_title AS Cargo, ROUND(AVG(employees.salary), 2) AS `Média salar
     WHEN ROUND(AVG(employees.salary), 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
     WHEN ROUND(AVG(employees.salary), 2) > 10500 THEN 'CEO'
   END AS 'Senioridade'
-FROM hr.employees AS employees 
+FROM hr.employees AS employees
   JOIN hr.jobs AS jobs ON jobs.job_id = employees.job_id
 GROUP BY jobs.job_title
 ORDER BY `Média salarial`, Cargo;
