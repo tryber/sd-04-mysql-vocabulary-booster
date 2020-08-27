@@ -5,8 +5,7 @@
 -- A segunda coluna deve possuir o alias "Preço" e exibir o preço desse produto.
 -- Os resultados devem estar ordenados pelo nome do produto em ordem alfabética.
 SELECT p.ProductName as Produto,
-p.Price as Preço,
-p.ProductID
+p.Price as Preço
 FROM w3schools.products as p
 INNER JOIN w3schools.order_details as d ON p.ProductID = d.ProductID
 WHERE d.Quantity > 80
