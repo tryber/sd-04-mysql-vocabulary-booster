@@ -10,4 +10,5 @@ SELECT
 FROM
     w3schools.customers AS cs,
     w3schools.customers AS cm
+HAVING `Número de compatriotas` <> 0
 ORDER BY cs.ContactName;
