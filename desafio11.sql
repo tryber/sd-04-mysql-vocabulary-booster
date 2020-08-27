@@ -3,7 +3,7 @@ SELECT
   cu.Country AS `País`,
   C.cnt - 1 AS `Número de compatriotas`
 FROM
-  w3schools.customers AS cu
+  w3schools.customers AS  cu
   INNER JOIN (
     SELECT
       Country,
