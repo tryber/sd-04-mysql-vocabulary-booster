@@ -6,8 +6,6 @@ FROM
   hr.employees AS e
   INNER JOIN hr.job_history AS h ON e.EMPLOYEE_ID = h.EMPLOYEE_ID
 WHERE
-  EMAIL LIKE email INTO JOB_QTY;
+  e.EMAIL LIKE email INTO JOB_QTY;
 RETURN JOB_QTY;
 END $ $ DELIMITER;
-SELECT
-  buscar_quantidade_de_empregos_por_funcionario('NKOCHHAR');
