@@ -23,8 +23,7 @@ from hr.employees as e1, hr.employees as e2
 inner join hr.jobs as j on j.JOB_ID = e2.JOB_ID
 where e1.JOB_ID = e2.JOB_ID
 group by e1.JOB_ID;
-
+/*
 select * from hr.employees;
 select * from hr.jobs;
-
-	
+*/
