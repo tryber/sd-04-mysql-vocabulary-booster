@@ -12,6 +12,9 @@ FROM
       w3schools.customers
     GROUP BY
       Country
-  ) AS C ON
-  cu.Country = C.Country
-  ORDER BY `Nome`;
+  ) AS C ON (
+    cu.Country = C.Country
+    AND C.cnt - 1 <> 0
+  )
+ORDER BY
+  `Nome`;
