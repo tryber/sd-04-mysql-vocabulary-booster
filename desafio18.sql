@@ -1,7 +1,13 @@
+USE hr;
+
+DROP FUNCTION IF EXISTS exibir_quantidade_pessoas_contratadas_por_mes_e_ano;
+
 DELIMITER $$
 
 CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(monthPeriod INT, yearPeriod INT)
+
 RETURNS INT READS SQL DATA
+
 BEGIN
     DECLARE total INTEGER;
     SELECT COUNT(*) FROM hr.employees AS e
