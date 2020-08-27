@@ -20,4 +20,3 @@ FROM hr.employees AS employees
   JOIN hr.jobs AS jobs ON jobs.job_id = employees.job_id
 GROUP BY jobs.job_title
 ORDER BY `Média salarial`, Cargo;
-
