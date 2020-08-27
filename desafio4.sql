@@ -9,15 +9,15 @@
 --     Média salarial acima de 10500 -> CEO
 -- Devido ao fato de a média salarial ser um valor monetário, sempre que for fazer uso da média salarial, é preciso arredondá-la usando apenas duas casas decimais.
 -- Os resultados devem estar ordenados pela média salarial em ordem crescente. Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
-SELECT jobs.job_title AS 'Cargo', ROUND(AVG(employees.salary), 2) AS `Média salarial`,
+SELECT jobs.job_title AS Cargo, ROUND(AVG(employees.salary), 2) AS `Média salarial`,
   CASE
     WHEN ROUND(AVG(employees.salary), 2) BETWEEN 2000 AND 5800 THEN 'Júnior'
     WHEN ROUND(AVG(employees.salary), 2) BETWEEN 5801 AND 7500 THEN 'Pleno'
     WHEN ROUND(AVG(employees.salary), 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
     WHEN ROUND(AVG(employees.salary), 2) > 10500 THEN 'CEO'
   END AS 'Senioridade'
-FROM hr.jobs AS jobs
-  JOIN hr.employees AS employees 
-  ON jobs.job_id = employees.job_id
+FROM hr.employees AS employees 
+  JOIN hr.jobs AS jobs ON jobs.job_id = employees.job_id
 GROUP BY jobs.job_title
-ORDER BY `Média salarial`, 'Cargo';
+ORDER BY `Média salarial`, Cargo;
+
