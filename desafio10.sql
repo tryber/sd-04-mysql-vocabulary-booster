@@ -1,4 +1,3 @@
- 
 SELECT p.ProductName AS Produto,
   MIN(o.Quantity) AS 'Mínima',
   MAX(o.Quantity) AS 'Máxima',
@@ -8,4 +7,4 @@ SELECT p.ProductName AS Produto,
   group by Produto
   HAVING `Média` > 20
   ORDER BY `Média`, Produto;
-  
+
