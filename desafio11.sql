@@ -8,37 +8,6 @@ group by c1.Country, c1.ContactName
 having count(c2.Country) > 1
 order by c1.ContactName;
 
-
--- select customers.ContactName as "Nome",
--- customers.Country as "País",
--- count(customers.Country ="USA" 
--- or customers.Country = "UK" 
--- or customers.Country ="Japain" 
--- or customers.Country ="Spain"
--- or customers.Country ="Sweden" 
--- or customers.Country ="Brazil" 
--- or customers.Country ="Germany" 
--- or customers.Country ="Italy" 
--- or customers.Country ="Norway" 
--- or customers.Country ="Singapore" 
--- or customers.Country ="Denmark"
--- or customers.Country ="Finland" 
--- or customers.Country ="Autralia" 
--- or customers.Country ="Canada"
--- or customers.Country ="Mexico"
--- or customers.Country ="Belgium"
--- or customers.Country ="France"
--- or customers.Country ="Portugal"
--- or customers.Country ="Venezuela"
--- or customers.Country ="Ireland"
--- or customers.Country ="Argentina"
--- or customers.Country ="Austria"
--- or customers.Country ="Switzerland"
--- or customers.Country ="poland") -1 as "Número de compatriotas"
--- from customers
--- group by customers.Country, customers.ContactName
--- order by customers.ContactName;
-
 /*Exibe todas as pessoas clientes que possuem compatriotas, 
 mostrando a quantidade de compatriotas para cada pessoa cliente. 
 Ou seja, suponha que houvese apenas quatro clientes:
