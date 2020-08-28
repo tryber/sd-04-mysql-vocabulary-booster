@@ -6,3 +6,4 @@ SELECT a.ContactName AS Nome,
   WHERE a.CustomerID <> b.CustomerID AND a.Country = b.Country
   GROUP BY a.CustomerID
   ORDER BY Nome;
+  

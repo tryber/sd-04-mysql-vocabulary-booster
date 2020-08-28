@@ -9,6 +9,6 @@ BEGIN
     ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
     WHERE e.EMAIL = email INTO jobs;
   RETURN jobs;
-END $$ DELIMITER ;
-
+END $$ DELIMITER;
 SELECT buscar_quantidade_de_empregos_por_funcionario('NKOCHHAR');
+

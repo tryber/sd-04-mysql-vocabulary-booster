@@ -7,5 +7,5 @@ BEGIN
     ON j.JOB_ID = e.JOB_ID
     WHERE j.JOB_TITLE = job;
 END $$ DELIMITER ;
-
 CALL buscar_media_por_cargo('Programmer');
+
