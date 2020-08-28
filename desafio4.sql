@@ -11,4 +11,3 @@ FROM hr.jobs AS jobs
   ON jobs.JOB_ID = employees.JOB_ID
   GROUP BY jobs.JOB_TITLE
   ORDER BY ROUND(AVG(employees.SALARY), 2), Cargo;
-

@@ -7,4 +7,3 @@ SELECT p.ProductName AS Produto,
   group by Produto
   HAVING `Média` > 20
   ORDER BY `Média`, Produto;
-
