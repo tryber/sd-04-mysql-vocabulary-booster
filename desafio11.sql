@@ -9,4 +9,5 @@ SELECT
             Ccomp.Country = C.Country
                 AND Ccomp.ContactName <> C.ContactName) AS `Número de compatriotas`
 FROM
-    w3schools.customers AS C;
+    w3schools.customers AS C
+ORDER BY C.ContactName;
