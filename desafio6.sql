@@ -9,4 +9,7 @@ FROM
   INNER JOIN hr.departments AS departments ON (
     history.DEPARTMENT_ID = departments.DEPARTMENT_ID
   )
-  INNER JOIN hr.employees AS employees ON (history.JOB_ID = employees.JOB_ID);
+  INNER JOIN hr.employees AS employees ON (history.JOB_ID = employees.JOB_ID)
+ORDER BY
+  "Nome completo" DESC,
+  Cargo ASC;
