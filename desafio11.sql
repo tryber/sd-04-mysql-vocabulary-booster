@@ -10,4 +10,5 @@ SELECT
         GROUP BY country) AS 'Número de compatriotas'
 FROM
     customers
+HAVING `Número de compatriotas` > 0
 ORDER BY ContactName;
