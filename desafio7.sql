@@ -1,10 +1,10 @@
-SELECT (
+SELECT IF(MONTH(START_DATE) IN(01,02,03),(
 SELECT UCASE(CONCAT(FIRST_NAME, ' ', LAST_NAME)) FROM hr.employees
-WHERE EMPLOYEE_ID = job_history.EMPLOYEE_ID) AS 'Nome completo',
-START_DATE AS 'Data de início',
-(SELECT SALARY FROM hr.employees
-WHERE EMPLOYEE_ID = hr.job_history.EMPLOYEE_ID) AS 'Salário'
+WHERE EMPLOYEE_ID = job_history.EMPLOYEE_ID), '') AS 'Nome completo',
+IF(MONTH(START_DATE) IN(01,02,03), START_DATE, '') AS 'Data de início',
+IF(MONTH(START_DATE) IN(01,02,03),(SELECT SALARY FROM hr.employees
+WHERE EMPLOYEE_ID = hr.job_history.EMPLOYEE_ID), '') AS 'Salário'
 FROM hr.job_history
 ORDER BY 1, 2
-LIMIT 10
-OFFSET 1
+LIMIT 6
+OFFSET 5
