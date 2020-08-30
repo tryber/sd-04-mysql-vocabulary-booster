@@ -2,15 +2,45 @@ USE hr;
 DELIMITER $$
 
 CREATE FUNCTION data_brasileira(data_gringa DATE)
-RETURNS varchar(50) READS SQL DATA
+RETURNS VARCHAR(20) READS SQL DATA
 BEGIN
 RETURN 
-	(CASE
-	WHEN DAY(data_gringa) < 10 and MONTH(data_gringa) < 10 THEN CONCAT(0, DAY(data_gringa), '/', 0,  MONTH(data_gringa), '/', YEAR(data_gringa))
-	WHEN DAY(data_gringa) < 10 THEN CONCAT(0, DAY(data_gringa), '/', MONTH(data_gringa), '/', YEAR(data_gringa))
-    WHEN MONTH(data_gringa) < 10 THEN CONCAT(DAY(data_gringa), '/', 0, MONTH(data_gringa), '/', YEAR(data_gringa))
-    ELSE CONCAT(DAY(data_gringa), '/', MONTH(data_gringa), '/', YEAR(data_gringa))
-	END);
+    CASE
+        WHEN
+            DAY(data_gringa) < 10
+                AND MONTH(data_gringa) < 10
+        THEN
+            CONCAT(0,
+                    DAY(data_gringa),
+                    '/',
+                    0,
+                    MONTH(data_gringa),
+                    '/',
+                    YEAR(data_gringa))
+        WHEN
+            DAY(data_gringa) < 10
+        THEN
+            CONCAT(0,
+                    DAY(data_gringa),
+                    '/',
+                    MONTH(data_gringa),
+                    '/',
+                    YEAR(data_gringa))
+        WHEN
+            MONTH(data_gringa) < 10
+        THEN
+            CONCAT(DAY(data_gringa),
+                    '/',
+                    0,
+                    MONTH(data_gringa),
+                    '/',
+                    YEAR(data_gringa))
+        ELSE CONCAT(DAY(data_gringa),
+                '/',
+                MONTH(data_gringa),
+                '/',
+                YEAR(data_gringa))
+    END;
 END $$
 
 DELIMITER ;
