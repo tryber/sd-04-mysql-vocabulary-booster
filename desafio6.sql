@@ -8,4 +8,5 @@ ON employees.JOB_ID = jobs.JOB_ID
 JOIN hr.job_history AS history
 ON employees.EMPLOYEE_ID = history.EMPLOYEE_ID
 JOIN hr.departments AS departments
-ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID;
+ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID
+ORDER BY 'Nome completo' DESC, 'Cargo' DESC;
