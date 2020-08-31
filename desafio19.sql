@@ -16,5 +16,6 @@ FROM
         LEFT JOIN
     hr.jobs j ON j.JOB_ID = jh.JOB_ID
 WHERE
-    EMAIL = email_do_funcionario;
+    EMAIL = email_do_funcionario
+ORDER BY Departamento, `Nome completo`;
 END$$
