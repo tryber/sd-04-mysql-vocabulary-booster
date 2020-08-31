@@ -1,5 +1,4 @@
-SELECT
-	(SELECT ContactName FROM w3schools.customers WHERE CustomerID = ord.CustomerId) AS 'Nome de contato',
+SELECT (SELECT ContactName FROM w3schools.customers WHERE CustomerID = ord.CustomerId) AS 'Nome de contato',
     sh.ShipperName AS 'Empresa que fez o envio',
     ord.OrderDate AS 'Data do pedido'
 FROM w3schools.orders AS ord
