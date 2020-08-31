@@ -28,6 +28,6 @@ WHERE E.EMAIL = emailFunc
 ORDER BY `Departamento`, `Cargo`;
 END $$
 
--- DELIMITER ;
+DELIMITER ;
 
 CALL exibir_historico_completo_por_funcionario('NKOCHHAR');
