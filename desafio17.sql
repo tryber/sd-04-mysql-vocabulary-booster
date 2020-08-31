@@ -1,4 +1,4 @@
-USE hr;
+/*USE hr;
 DELIMITER $$
 
 CREATE FUNCTION data_brasileira(data_gringa DATE)
@@ -43,13 +43,12 @@ RETURN
     END;
 END $$
 
-DELIMITER ;
-# usando uma função e data format pra converter datas
+DELIMITER ;*/
 SELECT 
     CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS 'Nome completo',
-    (DATE_FORMAT(START_DATE, '%d/%m/%Y')) AS 'Data de início',
-    (SELECT DATA_BRASILEIRA(END_DATE)) AS 'Data de rescisão',
-    ROUND(DATEDIFF(END_DATE,START_DATE) / 365, 2) AS 'Anos trabalhados'
+    DATE_FORMAT(START_DATE, '%d/%m/%Y') AS 'Data de início',
+    DATE_FORMAT(END_DATE, '%d/%m/%Y') AS 'Data de rescisão',
+    ROUND(DATEDIFF(END_DATE, START_DATE) / 365, 2) AS 'Anos trabalhados'
 FROM
     job_history jh
         JOIN
