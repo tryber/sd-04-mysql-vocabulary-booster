@@ -8,4 +8,4 @@ FROM hr.employees AS sameTableOne, hr.employees AS sameTableTwo
 WHERE sameTableOne.JOB_ID = sameTableTwo.JOB_ID
 AND CONCAT(sameTableOne.FIRST_NAME, ' ', sameTableOne.LAST_NAME) <>
 CONCAT(sameTableTwo.FIRST_NAME, ' ', sameTableTwo.LAST_NAME)
-ORDER BY 1, 2;
+ORDER BY 1, 4;
