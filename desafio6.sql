@@ -13,4 +13,3 @@ FROM
 ORDER BY
   "Nome completo" DESC,
   Cargo ASC;
-  

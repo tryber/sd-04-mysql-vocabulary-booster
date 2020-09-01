@@ -8,4 +8,3 @@ FROM
 ORDER BY
   `Variação salarial`,
   Cargo;
-  
