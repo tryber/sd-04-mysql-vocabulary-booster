@@ -1,10 +1,9 @@
-SELECT p.productname as 'Produto',
-    MIN(od.quantity) AS 'Mínimo',
-    MAX(od.quantity) AS 'Máximo',
-    ROUND(SUM(od.quantity) / COUNT(od.orderid), 2) AS 'Média'
-FROM order_details AS od
-    INNER JOIN products p on od.productid = p.productid
-GROUP BY `Produto`
-HAVING `Média` > 20
-ORDER BY `Média` ASC,
-    `Produto` ASC;
+SELECT 
+  c1.ContactName AS Nome,
+  c1.Country AS País,
+  COUNT(c2.CustomerID) AS `Número de compatriotas`
+-- self join
+FROM w3schools.customers AS c1, w3schools.customers AS c2
+WHERE c1.Country = c2.Country AND c1.CustomerID <> c2.CustomerID
+GROUP BY c1.CustomerID
+ORDER BY Nome;
