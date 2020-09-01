@@ -1,5 +1,5 @@
 SELECT p.productname as 'Produto',
-  MIN(od.quantity) AS 'Mínimo',
+  MIN(od.quantity) AS 'Mínima',
   MAX(od.quantity) AS 'Máximo',
   ROUND(SUM(od.quantity) / COUNT(od.orderid), 2) AS 'Média'
 FROM order_details AS od
