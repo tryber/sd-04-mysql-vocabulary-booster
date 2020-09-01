@@ -1,7 +1,10 @@
-SELECT UPPER(CONCAT(e.first_name, ' ', e.last_name)) as 'Nome completo',
-    jh.start_date as 'Data de início',
-    e.salary as 'Salário'
-FROM employees e
-    INNER JOIN job_history jh ON e.employee_id = jh.employee_id
-ORDER BY `Nome completo` ASC,
-    `Data de início` ASC;
+SELECT c.customername AS 'Nome de contato',
+    s.shippername AS 'Empresa que fez o envio',
+    o.orderdate AS 'Data do pedido'
+FROM orders as o
+    INNER JOIN shippers s on o.shipperid = s.shipperid
+    INNER JOIN customers c on o.customerid = c.customerid
+WHERE s.shippername in ('Speedy Express', 'United Package')
+ORDER BY c.customername ASC,
+    s.shippername ASC,
+    o.orderdate ASC;
