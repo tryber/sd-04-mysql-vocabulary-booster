@@ -5,7 +5,7 @@ SELECT
     WHEN ROUND(AVG(employees.SALARY), 2) > 10500 THEN "CEO"
     WHEN ROUND(AVG(employees.SALARY), 2) > 7500 THEN "Sênior"
     WHEN ROUND(AVG(employees.SALARY), 2) > 5800 THEN "Pleno"
-    WHEN ROUND(AVG(employees.SALARY), 2) >= 2000 THEN "Junior"
+    WHEN ROUND(AVG(employees.SALARY), 2) >= 2000 THEN "Júnior"
   END AS "Senioridade"
 FROM
   hr.jobs AS jobs
