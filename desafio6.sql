@@ -1,12 +1,12 @@
-SELECT CONCAT(employees.FIRST_NAME, ' ', employees.LAST_NAME) AS 'Nome completo',
-jobs.JOB_TITLE AS 'Cargo',
-history.START_DATE AS 'Data de início no cargo',
+SELECT CONCAT(employees.FIRST_NAME, ' ', employees.LAST_NAME) AS `Nome completo`,
+jobs.JOB_TITLE AS `Cargo`,
+job_history.START_DATE AS 'Data de início no cargo',
 departments.DEPARTMENT_NAME AS 'Departamento'
-FROM hr.employees AS employees
+FROM hr.job_history AS job_history
 JOIN hr.jobs AS jobs
-ON employees.JOB_ID = jobs.JOB_ID
-JOIN hr.job_history AS history
-ON employees.EMPLOYEE_ID = history.EMPLOYEE_ID
+ON job_history.JOB_ID = jobs.JOB_ID
+JOIN hr.employees AS employees
+ON job_history.EMPLOYEE_ID = employees.EMPLOYEE_ID
 JOIN hr.departments AS departments
-ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID
-ORDER BY 'Nome completo' DESC, 'Cargo' DESC;
+ON job_history.DEPARTMENT_ID = departments.DEPARTMENT_ID
+ORDER BY `Nome completo` DESC, `Cargo`;
