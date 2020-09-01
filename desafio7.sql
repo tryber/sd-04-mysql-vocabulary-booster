@@ -6,7 +6,7 @@ SELECT
 FROM
   hr.job_history AS history
   INNER JOIN hr.jobs AS jobs ON (history.JOB_ID = jobs.JOB_ID)
-  INNER JOIN hr.employees AS employees ON (history.JOB_ID = employees.JOB_ID)
+  INNER JOIN hr.employees AS employees ON (history.EMPLOYEE_ID = employees.EMPLOYEE_ID)
   WHERE MONTH(history.START_DATE) IN ("1", "2", "3")
 ORDER BY
   "Nome completo",
