@@ -1,6 +1,6 @@
 SELECT
   jobs.JOB_TITLE AS "Cargo",
-  ROUND(AVG(employees.SALARY)) AS "Média salarial",
+  ROUND(AVG(employees.SALARY), 2) AS "Média salarial",
   CASE
     WHEN ROUND(AVG(employees.SALARY), 2) > 10500 THEN "CEO"
     WHEN ROUND(AVG(employees.SALARY), 2) > 7500 THEN "Sênior"
