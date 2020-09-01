@@ -1,17 +1,16 @@
--- drop FUNCTION when neccesary
 DROP FUNCTION IF EXISTS exibir_quantidade_pessoas_contratadas_por_mes_e_ano;
 
 DELIMITER $$
 
 -- create FUNCTION
-CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano (start_month INT, start_year INT)
+CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(startMonth INT, startYear INT)
 RETURNS INT
 BEGIN
     DECLARE hired INT;
 
     SELECT COUNT(e.employee_id) INTO hired
     FROM employees AS e
-    WHERE MONTH(e.hire_date) = start_month AND YEAR(e.hire_date) = start_year;
+    WHERE MONTH(e.hire_date) = startMonth AND YEAR(e.hire_date) = startYear;
 
     RETURN hired;
 END $$
