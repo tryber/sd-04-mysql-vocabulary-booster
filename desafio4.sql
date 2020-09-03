@@ -1,5 +1,5 @@
 SELECT 
-  j.JOB_TITLE Cargo,
+  j.JOB_TITLE AS Cargo,
   ROUND(AVG(e.SALARY), 2) `Média salarial`,
   CASE 
     WHEN (ROUND(AVG(e.SALARY), 2) >= 2000 AND ROUND(AVG(e.SALARY), 2) <= 5800) THEN 'Júnior'
@@ -8,8 +8,8 @@ SELECT
     ELSE 'CEO'
   END Senioridade
 FROM
-  hr.jobs j,
-  hr.employees e
+  hr.jobs AS j,
+  hr.employees AS e
 WHERE
   j.JOB_ID = e.JOB_ID
 GROUP BY Cargo
