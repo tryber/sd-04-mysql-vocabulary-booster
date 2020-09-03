@@ -17,4 +17,4 @@ WHERE
 GROUP BY
     A.ContactName
 ORDER BY
-    A.ContactName;
+    A.ContactName ASC;
