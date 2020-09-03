@@ -6,9 +6,9 @@ SELECT
         FROM
             w3schools.customers
         WHERE
-            ContactName = A.ContactName
+            ContactName = A.ContactName 
     ) AS País,
-    COUNT(B.ContactName) - 1 AS 'Número de compatriotas'
+    COUNT(B.ContactName) AS 'Número de compatriotas'
 FROM
     w3schools.customers A,
     w3schools.customers B
