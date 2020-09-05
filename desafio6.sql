@@ -16,4 +16,4 @@ FROM hr.departments
 WHERE DEPARTMENT_ID = jh.DEPARTMENT_ID
 ) AS `Departamento`
 FROM hr.job_history AS jh
-ORDER BY `Nome completo`, `Cargo`;
+ORDER BY `Nome completo` DESC, `Cargo`;
