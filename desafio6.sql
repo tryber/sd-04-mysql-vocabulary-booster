@@ -9,7 +9,7 @@ SELECT JOB_TITLE
 FROM hr.jobs
 WHERE JOB_ID = jh.JOB_ID
 ) AS `Cargo`,
-START_DATE AS `Data de início de cargo`,
+START_DATE AS `Data de início do cargo`,
 (
 SELECT DEPARTMENT_NAME
 FROM hr.departments
