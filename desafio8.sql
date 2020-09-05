@@ -21,7 +21,3 @@ orders.OrderDate AS `Data do pedido`
 FROM w3schools.orders AS orders
 JOIN w3schools.customers AS customers
 ON orders.CustomerID = customers.CustomerID;*/
-
-
-
-
