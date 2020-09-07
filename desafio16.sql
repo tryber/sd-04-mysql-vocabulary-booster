@@ -1,6 +1,6 @@
 USE hr;
 
-DELIMITER $ $ CREATE PROCEDURE buscar_quantidade_de_empregos_por_funcionario(IN email VARCHAR(100)) BEGIN
+DELIMITER $$ CREATE PROCEDURE buscar_quantidade_de_empregos_por_funcionario(IN email VARCHAR(100)) BEGIN
 SELECT
     COUNT(*)
 FROM
@@ -9,4 +9,4 @@ FROM
 WHERE
     e.EMAIL LIKE (email);
 
-END $ $ DELIMITER;
+END $$ DELIMITER ;
