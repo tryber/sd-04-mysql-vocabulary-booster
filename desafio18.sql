@@ -11,5 +11,4 @@ WHERE (YEAR(HIRE_DATE) = yr) AND (MONTH(HIRE_DATE) = mth);
 RETURN total;
 END $$
 DELIMITER ;
-
 SELECT exibir_quantidade_pessoas_contratadas_por_mes_e_ano(6, 1987);
