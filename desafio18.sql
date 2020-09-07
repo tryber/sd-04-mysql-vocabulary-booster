@@ -1,7 +1,7 @@
 USE hr;
 DELIMITER $$
 DROP FUNCTION IF EXISTS exibir_quantidade_pessoas_contratadas_por_mes_e_ano;
-CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(yr INT, mth INT)
+CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mth INT, yr INT)
 RETURNS INT READS SQL DATA
 BEGIN
 DECLARE total INT;
@@ -12,4 +12,4 @@ RETURN total;
 END $$
 DELIMITER ;
 
-SELECT exibir_quantidade_pessoas_contratadas_por_mes_e_ano(1987, 6);
+SELECT exibir_quantidade_pessoas_contratadas_por_mes_e_ano(6, 1987);
