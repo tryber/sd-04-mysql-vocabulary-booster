@@ -9,5 +9,5 @@ FROM
   INNER JOIN hr.employees AS employees ON (history.EMPLOYEE_ID = employees.EMPLOYEE_ID)
   WHERE MONTH(history.START_DATE) IN ("1", "2", "3")
 ORDER BY
-  "Nome completo",
+  "Nome completo" DESC,
   Cargo;
