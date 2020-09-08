@@ -2,6 +2,7 @@ USE hr;
 
 DROP FUNCTION IF EXISTS exibir_quantidade_pessoas_contratadas_por_mes_e_ano;
 
+
 DELIMITER $ $ CREATE PROCEDURE exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes INT, ano INT) BEGIN
 SELECT
     COUNT(*)
