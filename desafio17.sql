@@ -1,16 +1,32 @@
 SELECT
     CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) 'Nome completo',
     CONCAT(
-        DAY(jh.START_DATE),
+        IF(
+            LENGTH(DAY(jh.START_DATE)) = 1,
+            CONCAT('0', DAY(jh.START_DATE)),
+            DAY(jh.START_DATE)
+        ),
         '/',
-        MONTH(jh.START_DATE),
+        IF(
+            LENGTH(MONTH(jh.START_DATE)) = 1,
+            CONCAT('0', MONTH(jh.START_DATE)),
+            MONTH(jh.START_DATE)
+        ),
         '/',
         YEAR(jh.START_DATE)
     ) 'Data de início',
     CONCAT(
-        DAY(jh.END_DATE),
+        IF(
+            LENGTH(DAY(jh.END_DATE)) = 1,
+            CONCAT('0', DAY(jh.END_DATE)),
+            DAY(jh.END_DATE)
+        ),
         '/',
-        MONTH(jh.END_DATE),
+        IF(
+            LENGTH(MONTH(jh.END_DATE)) = 1,
+            CONCAT('0', MONTH(jh.END_DATE)),
+            MONTH(jh.END_DATE)
+        ),
         '/',
         YEAR(jh.END_DATE)
     ) 'Data de rescisão',
