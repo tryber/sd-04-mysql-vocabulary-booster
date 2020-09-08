@@ -37,4 +37,3 @@ FROM
 ORDER BY
     CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) ASC,
     (YEAR(jh.END_DATE) - YEAR(jh.START_DATE)) ASC;
-    
