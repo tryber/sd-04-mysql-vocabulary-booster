@@ -9,10 +9,10 @@ DECLARE contratados INT;
 SELECT
     COUNT(*) 
 FROM
-    hr.job_history
+    hr.job_history jh
 WHERE
-    MONTH(HIRE_DATE) = mes
-    AND YEAR(HIRE_DATE) = ano
+    MONTH(jh.HIRE_DATE) = mes
+    AND YEAR(jh.HIRE_DATE) = ano
 INTO contratados;
     RETURN contratados;
 END $$ 
