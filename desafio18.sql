@@ -1,17 +1,19 @@
 USE hr;
 
-DROP FUNCTION IF EXISTS exibir_quantidade_pessoas_contratadas_por_mes_e_ano;
-
-
 DELIMITER $$ 
-CREATE PROCEDURE exibir_quantidade_pessoas_contratadas_por_mes_e_ano  (mes INT, ano INT) BEGIN
+DROP FUNCTION IF EXISTS exibir_quantidade_pessoas_contratadas_por_mes_e_ano$$
+CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes INT, ano INT) 
+RETURNS INT
+BEGIN
+DECLARE contratados INT;
 SELECT
-    COUNT(*)
+    COUNT(*) 
 FROM
-    hr.job_history AS jh
+    hr.job_history
 WHERE
-    MONTH(jh.START_DATE) = mes
-    AND YEAR(jh.START_DATE) = ano;
+    MONTH(HIRE_DATE) = mes
+    AND YEAR(HIRE_DATE) = ano
+INTO contratados;
+    RETURN contratados;
 END $$ 
-
 DELIMITER ;
