@@ -1,4 +1,3 @@
-select * from employees; select * from departments; select * from job_history; select * from jobs;
 create procedure exibir_historico_completo_por_funcionario(in email_emp varchar(300))
 begin
 select concat(e.first_name, ' ', e.last_name) `nome completo`, d.department_name departamento, j.job_title cargo
