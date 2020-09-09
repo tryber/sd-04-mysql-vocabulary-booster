@@ -8,7 +8,7 @@ WHERE EMPLOYEE_ID = jh.EMPLOYEE_ID
 SELECT JOB_TITLE
 FROM hr.jobs
 WHERE JOB_ID = jh.JOB_ID
-) AS `Cargo`,
+) AS Cargo,
 START_DATE AS `Data de início do cargo`,
 (
 SELECT DEPARTMENT_NAME
@@ -16,4 +16,4 @@ FROM hr.departments
 WHERE DEPARTMENT_ID = jh.DEPARTMENT_ID
 ) AS `Departamento`
 FROM hr.job_history AS jh
-ORDER BY `Nome completo` DESC, `Cargo`;
+ORDER BY `Nome completo` DESC, Cargo;
