@@ -1,7 +1,7 @@
 DELIMITER $$
 create procedure exibir_historico_completo_por_funcionario(in email_emp varchar(300))
 begin
-select concat(e.first_name, ' ', e.last_name) `nome completo`, d.department_name departamento, j.job_title cargo
+select concat(e.first_name, ' ', e.last_name) `Nome completo`, d.department_name Departamento, j.job_title Cargo
 from hr.employees e 
 inner join hr.job_history jh on jh.employee_id = e.employee_id
 inner join hr.jobs j on jh.job_id = j.job_id
