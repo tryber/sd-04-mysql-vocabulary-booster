@@ -6,4 +6,5 @@ FROM w3schools.orders
 WHERE EmployeeID = em.EmployeeID
 ) AS `Total de pedidos`
 FROM w3schools.employees AS em
+HAVING `Total de pedidos` > 0
 ORDER BY `Total de pedidos`;
