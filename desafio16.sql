@@ -2,7 +2,7 @@ USE hr;
 DELIMITER $$
 
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(300))
-RETURNS INT DETERMINISTIC
+RETURNS INT READS SQL DATA
 BEGIN
 DECLARE jobs_quantity INT;
 -- Using Subquery returns more than one row, besides resulting in the same value
