@@ -1,5 +1,5 @@
 SELECT
-  customers.CustomerName AS "Nome",
+  customers.ContactName AS "Nome",
   customers.Country AS "País",
   (
     SELECT
