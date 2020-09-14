@@ -1,9 +1,13 @@
 USE hr;
 
-DELIMITER
+DELIMITER $$
+
 DROP PROCEDURE IF EXISTS exibir_historico_completo_por_funcionario;
-CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN email VARCHAR(55));
+
+CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN email VARCHAR(55))
+
 BEGIN
+
 SELECT
   CONCAT(employees.first_name, ' ', employees.last_name) AS "Nome completo",
   departments.department_name AS "Departamento",
@@ -14,10 +18,13 @@ FROM
   INNER JOIN hr.departments AS departments ON (departments.department_id = jobHistory.department_id)
   INNER JOIN hr.jobs AS jobs ON (jobs.job_id = jobHistory.job_id)
 WHERE
-  e.email = email
+  employees.email = email
 ORDER BY
   Departamento,
   Cargo;
-END DELIMITER;
+  
+END $$
+
+DELIMITER ;
 
 CALL exibir_historico_completo_por_funcionario("NKOCHHAR");
