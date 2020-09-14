@@ -1,6 +1,6 @@
 USE hr;
 
-DELIMITER $$
+DELIMITER
 DROP PROCEDURE IF EXISTS exibir_historico_completo_por_funcionario;
 CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN email VARCHAR(55));
 BEGIN
@@ -18,6 +18,6 @@ WHERE
 ORDER BY
   Departamento,
   Cargo;
-END DELIMITER $$ ;
+END DELIMITER;
 
 CALL exibir_historico_completo_por_funcionario("NKOCHHAR");
